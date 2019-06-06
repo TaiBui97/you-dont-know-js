@@ -89,4 +89,39 @@ let reduceWithCodition = arrDemo.reduce((previosVal, currentVal) => {
     return previosVal;
 }, []);
 
-console.log(reduceWithCodition)
+var voters = [
+    {name:'Bob' , age: 30, voted: 1},
+    {name:'Jake' , age: 32, voted: 1},
+    {name:'Kate' , age: 25, voted: 0},
+    {name:'Sam' , age: 20, voted: 0},
+    {name:'Phil' , age: 21, voted: 1},
+    {name:'Ed' , age:55, voted:1},
+    {name:'Tami' , age: 54, voted:1},
+    {name: 'Mary', age: 31, voted: 0},
+    {name: 'Becky', age: 43, voted: 0},
+    {name: 'Joey', age: 41, voted: 1},
+    {name: 'Jeff', age: 30, voted: 1},
+    {name: 'Zack', age: 19, voted: 0}
+];
+
+//sum
+let reduceSumConditions = voters.reduce((previosVal,currentVal)=>{
+    if(Object.is(currentVal['voted'],1)){
+        previosVal = previosVal + currentVal.age;
+    }
+    return previosVal;
+},0);
+//arr
+let votterLengthFalse = voters.filter(voters => voters.voted == 0 && voters).length;
+let reduceAvgConditions = voters.reduce((previosVal,currentVal,index)=>{
+    if(currentVal.voted === 0){
+        if(voters.length -1 === index){
+            return (previosVal + currentVal.age) / votterLengthFalse;
+        }
+        return previosVal + currentVal.age;
+    }
+    return previosVal + currentVal.age;
+
+},0);
+
+console.log(reduceAvgConditions)
