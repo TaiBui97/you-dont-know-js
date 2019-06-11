@@ -10,22 +10,22 @@
 // console.log(strSliced);
 
 // let arrSplitted = nameCourse.split(' ');
-// console.log(strSliced);
+// console.log(arrSplitted);
 
 // let stringSubStr = nameCourse.substr(1,3);
 // console.log(stringSubStr);
 
 // let stringSubString = nameCourse.substring(1,3); //lay chi muc
-// console.log(strSliced);
+// console.log(stringSubString);
 
 // let stringTrim = nameCourse.trim() //bo ki tu trong dau va cuoi
 // console.log(stringTrim);
 
 // let replaceToA = nameCourse.replace('mearn', 'MERN').trim();
 // console.log(replaceToA);
-
+//splice xoa phan tu trong mang bang vi tri (batdau,kt)
 ////////////-------------------/////////////
-const content = `<item>
+const contents = `<item>
 <title>Sắc vóc tuổi 45 của 'bom sex' Lâm Chí Linh</title>
 <description>
 <![CDATA[
@@ -49,8 +49,6 @@ https://vnexpress.net/giai-tri/sac-voc-tuoi-45-cua-bom-sex-lam-chi-linh-3934776.
 let indexF = content.indexOf('<title>');
 let indexT = content.indexOf('</title>');
 //let subStringTittle = content.substring(indexF,indexT).replace("<title>","");
- let subStringTittle = content.slice(indexF + '<title>'.length ,indexT);
+let subStringTittle = content.slice(indexF + '<title>'.length, indexT);
 
 console.log(subStringTittle);
-
-let 
