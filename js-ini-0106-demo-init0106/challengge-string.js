@@ -69,7 +69,7 @@ arrItems.splice(0, 1);
 const getBody = (item, keyStart, keyEnd) => {
     let indexStart = item.indexOf(keyStart);
     let indexEnd = item.indexOf(keyEnd);
-    return item.slice(indexStart, keyStart.length, indexEnd);
+    return item.slice(indexStart + keyStart.length, indexEnd);
 
 }
 const arrInfoItem = arrItems.forEach(item => {
@@ -77,5 +77,6 @@ const arrInfoItem = arrItems.forEach(item => {
     // let indexT = item.indexOf('</title>');
     // let subStringTittle = item.slice(indexF + '<title>'.length, indexT);
     let descriptions = getBody(item, '<description>', '</description>');
-    console.log({ descriptions })
+    let title = getBody(item, '<title>' ,'</title>')
+    console.log({ descriptions , title})
 });
