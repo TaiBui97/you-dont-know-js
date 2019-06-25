@@ -59,9 +59,7 @@ app.post('/calcu-demo', (req, res) => {
     res.render('result-calcu', { result: calcu1._getResultCal() })
 });
 
-/**
- * Bài Tập
- */
+
 app.get('/users', (req, res) => {
     res.render('users', { users, error: false });
 })
@@ -82,6 +80,15 @@ app.get('/upload-image', (req, res) => {
 app.post('/upload-image-demo', UPLOAD_CONFIG.single('avatar'), (req, res) => {
     const file = req.file;
     console.log({ file })
+});
+const configImg = [
+    { name: 'main_image', maxCount: 1 },
+    { name: 'demo_image', maxCount: 2 }
+
+]
+app.post('/upload-image-mul', UPLOAD_CONFIG.fields(configImg), (req, res) => {
+    const files = req.files;
+    res.send({ files })
 });
 
 app.listen(3000, () => console.log(`SERVER STARTED AT PORT 3000`));
