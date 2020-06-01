@@ -21,6 +21,7 @@ function test() {
     obj2.b.c = 3;
     console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 3}}
     console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 3}}
+    object 2 thay đỗi -> object 1 thay đỡi theo 
 
     // Deep Clone
     obj1 = {

@@ -61,6 +61,20 @@ var arrDemoPop = arrObj.pop(); // pop : xoa phan tu cuoi mang
 
 //====================--===================//
 
+var voters = [
+    {name:'Bob' , age: 30, voted: 1},
+    {name:'Jake' , age: 32, voted: 1},
+    {name:'Kate' , age: 25, voted: 0},
+    {name:'Sam' , age: 20, voted: 0},
+    {name:'Phil' , age: 21, voted: 1},
+    {name:'Ed' , age:55, voted:1},
+    {name:'Tami' , age: 54, voted:1},
+    {name: 'Mary', age: 31, voted: 0},
+    {name: 'Becky', age: 43, voted: 0},
+    {name: 'Joey', age: 41, voted: 1},
+    {name: 'Jeff', age: 30, voted: 1},
+    {name: 'Zack', age: 19, voted: 0}
+];
 
 const arrDemo = [
     { name: 'a', fullname: 'b', age: 2, gender: 1 },
@@ -89,20 +103,20 @@ let reduceWithCodition = arrDemo.reduce((previosVal, currentVal) => {
     return previosVal;
 }, []);
 
-var voters = [
-    {name:'Bob' , age: 30, voted: 1},
-    {name:'Jake' , age: 32, voted: 1},
-    {name:'Kate' , age: 25, voted: 0},
-    {name:'Sam' , age: 20, voted: 0},
-    {name:'Phil' , age: 21, voted: 1},
-    {name:'Ed' , age:55, voted:1},
-    {name:'Tami' , age: 54, voted:1},
-    {name: 'Mary', age: 31, voted: 0},
-    {name: 'Becky', age: 43, voted: 0},
-    {name: 'Joey', age: 41, voted: 1},
-    {name: 'Jeff', age: 30, voted: 1},
-    {name: 'Zack', age: 19, voted: 0}
-];
+// var voters = [
+//     {name:'Bob' , age: 30, voted: 1},
+//     {name:'Jake' , age: 32, voted: 1},
+//     {name:'Kate' , age: 25, voted: 0},
+//     {name:'Sam' , age: 20, voted: 0},
+//     {name:'Phil' , age: 21, voted: 1},
+//     {name:'Ed' , age:55, voted:1},
+//     {name:'Tami' , age: 54, voted:1},
+//     {name: 'Mary', age: 31, voted: 0},
+//     {name: 'Becky', age: 43, voted: 0},
+//     {name: 'Joey', age: 41, voted: 1},
+//     {name: 'Jeff', age: 30, voted: 1},
+//     {name: 'Zack', age: 19, voted: 0}
+// ];
 
 //sum
 let reduceSumConditions = voters.reduce((previosVal,currentVal)=>{
