@@ -1,4 +1,4 @@
-const arr_ = [2, 3, 5, 7, 11, 13, 17, 19, 23, 27, 31, 37, 39, 41, 43, 47];
+const arr_ = [2, 3, 5, 7, 9, 13, 17, 19, 23, 27, 31, 37, 39, 41, 43, 47];
 
 const arr = [5, 3, 1, 4, 6];
 // /* Javascript Algorithms — Bubble Sort */
@@ -178,22 +178,39 @@ function insertionSort(arr) {
     return arr;
 }
 
-function findSumNums(arr_, target) {
-    let low = 0;
-    let high = arr_.length - 1;
+
+function findSumsTwoNums(arr_, target) {
+    let low = 0,
+        high = arr_.length - 1;
     while (low < high) {
         if (arr_[low] + arr_[high] === target) {
-            return arr_[low + 1, high + 1];
+            return [low, high];
         }
-        else if (arr_[low] + arr_[high] > target) {
+        if (arr_[low] + arr_[high] > target) {
             high--;
         } else {
             low++;
         }
+
+
     }
     return [];
 }
-console.log(findSumNums(arr_, 5));
+
+function insertionSort(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        let j = i - 1;
+        let tmp = arr[i];
+        while (j >= 0 && arr[j] > tmp) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = tmp;
+    }
+    return arr;
+
+}
+console.log(insertionSort(arr));
 // console.log(insertionSort(arr));
 
 /* INSERTION SORT TIME COMPLEXITY : 0(N^2) */
