@@ -74,43 +74,43 @@ console.log(thanosBasket);
   Soul_Stone: 'NO' } 
   */
 
-// const addRealityStone = (basket) => ({
-//     ...basket,
-//     Reality_Stone: 'Yes'
-// })
-// const addPowerStone = (basket) => ({
-//     ...basket,z
-//     Power_Stone: 'Yes'
-// })
-// const addMindStone = (basket) => ({
-//     ...basket,
-//     Mind_Stone: 'Yes'
-// })
-// const addTimeStone = (basket) => ({
-//     ...basket,
-//     Time_Stone: 'Yes'
-// })
-// const addSoulStone = (basket) => ({
-//     ...basket,
-//     Soul_Stone: 'Yes'
-// })
-// //Once Thanos has three stones- Space, Reality and Power - his basket will look like below
-// addSpaceStone(addRealityStone(addPowerStone(thanosBasket)))
-// //{Space_Stone: "Yes", Reality_Stone: "Yes", Power_Stone: "Yes", Mind_Stone: "NO", Time_Stone: "NO", Soul_Stone: "NO"}
+const addRealityStone = (basket) => ({
+    ...basket,
+    Reality_Stone: 'Yes'
+})
+const addPowerStone = (basket) => ({
+    ...basket,z
+    Power_Stone: 'Yes'
+})
+const addMindStone = (basket) => ({
+    ...basket,
+    Mind_Stone: 'Yes'
+})
+const addTimeStone = (basket) => ({
+    ...basket,
+    Time_Stone: 'Yes'
+})
+const addSoulStone = (basket) => ({
+    ...basket,
+    Soul_Stone: 'Yes'
+})
+//Once Thanos has three stones- Space, Reality and Power - his basket will look like below
+addSpaceStone(addRealityStone(addPowerStone(thanosBasket)))
+//{Space_Stone: "Yes", Reality_Stone: "Yes", Power_Stone: "Yes", Mind_Stone: "NO", Time_Stone: "NO", Soul_Stone: "NO"}
 
-// /* ___________________________________________________________________
-//  */
+/* ___________________________________________________________________
+ */
 
-// /* Referential Transparency */
+/* Referential Transparency */
 
-// function haveSixStones() {
-//     return 'absolutePower'
-// }
-// console.log(haveSixStones()) //absolutePower
-// console.log('absolutePower') //absolutePower
+function haveSixStones() {
+    return 'absolutePower'
+}
+console.log(haveSixStones()) //absolutePower
+console.log('absolutePower') //absolutePower
 
-// addSpaceStone(addRealityStone(addPowerStone(thanosBasket)))
-// addPowerStone(addRealityStone(addSpaceStone(thanosBasket)))
-// addRealityStone(addPowerStone(addSpaceStone(thanosBasket)))
-// //all the above three will give the same result.
-// //{Space_Stone: "Yes", Reality_Stone: "Yes", Power_Stone: "Yes", Mind_Stone: "NO", Time_Stone: "NO", Soul_Stone: "NO"}
+addSpaceStone(addRealityStone(addPowerStone(thanosBasket)))
+addPowerStone(addRealityStone(addSpaceStone(thanosBasket)))
+addRealityStone(addPowerStone(addSpaceStone(thanosBasket)))
+//all the above three will give the same result.
+//{Space_Stone: "Yes", Reality_Stone: "Yes", Power_Stone: "Yes", Mind_Stone: "NO", Time_Stone: "NO", Soul_Stone: "NO"}

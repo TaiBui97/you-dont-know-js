@@ -88,11 +88,16 @@ function removeDuplicate(arr) {
 
 // THE BEST FROM TWO WORLDS 
 function uniq(a) {
-    var prims = {"boolean":{}, "number":{}, "string":{}}, objs = [];
+    var prims = {
+            "boolean": {},
+            "number": {},
+            "string": {}
+        },
+        objs = [];
 
-    return a.filter(function(item) {
+    return a.filter(function (item) {
         var type = typeof item;
-        if(type in prims)
+        if (type in prims)
             return prims[type].hasOwnProperty(item) ? false : (prims[type][item] = true);
         else
             return objs.indexOf(item) >= 0 ? false : objs.push(item);
@@ -101,15 +106,28 @@ function uniq(a) {
 //HASHTABLE TO THE RESCUE
 function uniq(a) {
     var seen = {};
-    return a.filter(function(item) {
+    return a.filter(function (item) {
         return seen.hasOwnProperty(item) ? false : (seen[item] = true);
     });
 }
 
-function reserve(str){
-    return str.split(""). reduce((rev,char) => char + rev, '')
+//ES2016
+function reserve(str) {
+    return str.split("").reduce((rev, char) => char + rev, '')
 }
+//spread syntax es6 method
 
+// RECURSION
+
+// Palindrome : reads the same backward as forward
+
+function palindrome(str) {
+    var re = /[\W_]/g;
+    var lowRegStr = str.toLowerCase().replace(re, '');
+    var reverseStr = lowRegStr.split('').reverse().join('');
+    return reverseStr === lowRegStr;
+}
+console.log(palindrome("A man, a plan, a canal. Panama"));
 let string = 'abcde';
 console.log(reserve(string));
 console.log(uniq(_names));
