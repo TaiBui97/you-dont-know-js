@@ -127,8 +127,9 @@ function palindrome(str) {
     var reverseStr = lowRegStr.split('').reverse().join('');
     return reverseStr === lowRegStr;
 }
+
 console.log(palindrome("A man, a plan, a canal. Panama"));
 let string = 'abcde';
-console.log(reserve(string));
-console.log(uniq(_names));
-console.log(removeDuplicate(_names));
+// console.log(reserve(string));
+// console.log(uniq(_names));
+// console.log(removeDuplicate(_names));
